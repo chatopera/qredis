@@ -21,5 +21,16 @@
   },
   "devDependencies": {
     "ava": "^0.16.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Samurais/qredis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Samurais/qredis/issues"
+  },
+  "homepage": "https://github.com/Samurais/qredis#readme"
 }
