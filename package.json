@@ -1,0 +1,25 @@
+{
+  "name": "redisq",
+  "version": "1.0.0",
+  "description": "map redis commands into Promise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "redis",
+    "q",
+    "promise"
+  ],
+  "author": "hailiang.hl.wang@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "lodash": "^4.16.4",
+    "q": "^1.4.1",
+    "redis": "^2.6.2"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0"
+  }
+}
