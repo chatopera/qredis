@@ -1,5 +1,5 @@
 {
-  "name": "redisq",
+  "name": "qredis",
   "version": "1.0.0",
   "description": "map redis commands into Promise",
   "main": "index.js",
