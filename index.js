@@ -3,14 +3,13 @@
 */
 
 const Q = require('q'),
-    _ = require('lodash'),
+    // https://github.com/NodeRedis/redis-commands/blob/master/commands.json
     commands = require('./commands.json');
 
 exports = module.exports = (client) => {
-    let keys = _.keys(commands);
     let cli = {};
-    _.each(keys, (val)=>{
-        cli[val] = Q.nbind(client[val], client)
-    });
+    for (let i in commands){
+        cli[i] = Q.nbind(client[i], client);
+    }
     return cli;
 }
