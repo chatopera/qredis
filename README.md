@@ -13,3 +13,6 @@ qredis.set('s1', 'hello')
     }, function(err) {
     });
 ```
+
+
+Get redis commands in [redis-commmands](https://github.com/NodeRedis/redis-commands/blob/master/commands.json) module.
