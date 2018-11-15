@@ -1,9 +1,5 @@
 const test = require('ava');
-const redis = require('redis');
-const client = redis.createClient();
-
-
-var redisq = require('../index')(client);
+var redisq = require('../index')();
 
 
 test.cb('Philly Redis Test#set', t => {

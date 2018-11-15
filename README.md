@@ -3,9 +3,7 @@
 Get a promised redis client.
 
 ```
-const redis = require('redis');
-const client = redis.createClient();
-var qredis = require('qredis')(client);
+var qredis = require('qredis')({options});
 
 qredis.set('s1', 'hello')
     .then(function(result) {
@@ -15,6 +13,9 @@ qredis.set('s1', 'hello')
 ```
 
 Get redis commands in [redis-commmands](https://github.com/NodeRedis/redis-commands/blob/master/commands.json) module.
+
+Get `options` in [redis](https://www.npmjs.com/package/redis#options-object-properties).
+
 
 ## Test
 ```
