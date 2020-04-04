@@ -1,6 +1,6 @@
 {
   "name": "qredis",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "map redis commands into Promise",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,9 @@
   "author": "hailiang.hl.wang@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "debug": "^4.1.0",
+    "debug": "^4.1.1",
     "q": "^1.5.1",
-    "redis": "^2.8.0"
+    "redis": "^3.0.2"
   },
   "devDependencies": {
     "ava": "^0.16.0"
