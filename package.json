@@ -1,6 +1,6 @@
 {
   "name": "qredis",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "map redis commands into Promise",
   "main": "index.js",
   "scripts": {
@@ -15,11 +15,11 @@
   "license": "MIT",
   "dependencies": {
     "debug": "^4.1.1",
-    "q": "^1.5.1",
+    "qind": "^1.0.0",
     "redis": "^3.0.2"
   },
   "devDependencies": {
-    "ava": "^0.16.0"
+    "ava": "^3.6.0"
   },
   "directories": {
     "test": "test"
@@ -31,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/Samurais/qredis/issues"
   },
-  "homepage": "https://github.com/Samurais/qredis#readme"
+  "homepage": "https://github.com/Samurais/qredis#readme",
+  "engines": {
+    "node": ">=0.12"
+  }
 }

@@ -2,11 +2,11 @@
  * Expose redis commands as Promise
  */
 
-const Q = require('q'),
-    debug = require('debug')('qredis'),
-    // https://github.com/NodeRedis/redis-commands/blob/master/commands.json
-    commands = require('./commands.json'),
-    redis = require('redis');
+const qind = require("qind"),
+  debug = require("debug")("qredis"),
+  // https://github.com/NodeRedis/redis-commands/blob/master/commands.json
+  commands = require("./commands.json"),
+  redis = require("redis");
 
 /**
  * Config 配置
@@ -15,19 +15,19 @@ const Q = require('q'),
  * @return {[type]}        [description]
  */
 exports = module.exports = (config) => {
-    const client = redis.createClient(config);
+  const client = redis.createClient(config);
 
-    client.on('connect', () => {
-        debug("Redis Client connected.");
-    })
+  client.on("connect", () => {
+    debug("Redis Client connected.");
+  });
 
-    client.on('error', (err) => {
-        console.log("Redis Client error", err);
-    })
+  client.on("error", (err) => {
+    console.log("Redis Client error", err);
+  });
 
-    let cli = {};
-    for (let i in commands) {
-        cli[i] = Q.nbind(client[i], client);
-    }
-    return cli;
-}
+  let cli = {};
+  for (let i in commands) {
+    cli[i] = qind(client[i], client);
+  }
+  return cli;
+};
