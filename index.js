@@ -16,6 +16,7 @@ const qind = require("qind"),
  */
 exports = module.exports = (config) => {
   const client = redis.createClient(config);
+  if (config["auth"]) client.auth(config["auth"]);
 
   client.on("connect", () => {
     debug("Redis Client connected.");
